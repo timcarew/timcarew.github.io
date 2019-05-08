@@ -47,7 +47,7 @@ body {
           cursor: pointer; }
       .header__secondhalf--icons-github {
         transition: all 0.1s linear;
-        padding: 0 2rem 0 1rem; }
+        padding: 0 4rem 0 1rem; }
         .header__secondhalf--icons-github:hover {
           color: #6e5494;
           cursor: pointer; }
