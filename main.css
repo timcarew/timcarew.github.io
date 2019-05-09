@@ -66,6 +66,9 @@ body {
     font-size: 2.5rem;
     border-radius: 2rem;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2)); }
+    @media screen and (max-width: 720px) {
+      .main-about {
+        margin: 5rem auto 0 auto; } }
     .main-about_profile {
       margin-right: 3rem;
       height: 15rem;
@@ -85,23 +88,25 @@ body {
     font-size: 2.5rem;
     border-radius: 2rem;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.2)); }
+    @media screen and (max-width: 720px) {
+      .main-tools {
+        margin: 5rem auto 0 auto; } }
 
 .projects {
   display: grid;
   width: 88%;
-  padding: 1rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
   border-radius: 2rem; }
   @media screen and (max-width: 720px) {
     .projects {
       width: 75%; } }
   .projects-title {
-    margin: 5rem auto;
+    margin: 2rem auto 5rem auto;
     font-size: 3rem; }
   .projects-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10rem;
+    grid-gap: 5rem;
     font-size: 2rem; }
     @media screen and (max-width: 720px) {
       .projects-cards {
