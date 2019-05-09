@@ -6,6 +6,7 @@
 
 html {
   font-size: 62.5%;
+  min-width: 25rem;
 }
 
 body {
@@ -87,6 +88,7 @@ body {
   }
 
   &-about {
+    min-width: 29rem;
     background-color: white;
     margin: 10rem auto 0 auto;
     width: 75%;
