@@ -128,5 +128,14 @@ body {
       .projects-cards_2-link {
         text-decoration: none;
         color: #1BA1F1; }
+    .projects-cards_3 {
+      border-radius: 2rem;
+      background-color: white;
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+      padding: 2rem;
+      text-align: center; }
+      .projects-cards_3-link {
+        text-decoration: none;
+        color: #1BA1F1; }
 
 /*# sourceMappingURL=main.css.map */
