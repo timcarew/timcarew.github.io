@@ -193,5 +193,18 @@ body {
         color: #1BA1F1;
       }
     }
+
+    &_4 {
+      border-radius: 2rem;
+      background-color: white;
+      filter: drop-shadow(5px 5px 5px rgba(0,0,0,.5));
+      padding: 2rem;
+      text-align: center;
+
+      &-link {
+        text-decoration: none;
+        color: #1BA1F1;
+      }
+    }
   }
 }
