@@ -51,23 +51,53 @@ body {
 
       font-size: 3rem;
       color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 2rem;
 
       a {
         color: white;
       }
 
-      &-mail{
+      &-filebox {
+        text-align: center;
+        margin-right: 4rem;
+      }
+
+      &-file {
         transition: all 0.1s linear;
-        padding: 0 1rem;
+        margin: -4rem;
+        padding: 4rem;
+        &:hover{
+          color: #5271FF;
+          cursor: pointer;
+        }
+      }
+
+      &-mailbox {
+        text-align: center;
+        margin-right: 4rem;
+      }
+
+      &-mail {
+        transition: all 0.1s linear;
+        margin: -4rem;
+        padding: 4rem;
         &:hover{
           color: #ffa500;
           cursor: pointer;
         }
       }
 
+      &-githubbox {
+        text-align: center;
+        margin-right: 4rem;
+      }
+
       &-github {
         transition: all 0.1s linear;
-        padding: 0 2rem 0 1rem;
+        margin: -4rem;
+        padding: 4rem;
         &:hover{
           color: #6e5494;
           cursor: pointer;
