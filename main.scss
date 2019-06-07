@@ -33,8 +33,14 @@ body {
       padding: 0 2rem;
       font-size: 5em;
       color: #fffff7;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
-  } // END FIRST HALF
+
+  }
+ // END FIRST HALF
 
   &__secondhalf {
     float: left;
@@ -54,6 +60,11 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 2rem;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2rem;
+        grid-gap: 0;
+      }
 
       a {
         color: white;
@@ -107,7 +118,6 @@ body {
   } // END SECOND HALF
 
 }
-
 .main {
 
   display: grid;
