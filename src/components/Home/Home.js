@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import Computer from "../Computer/Computer";
 import SocialDrawer from "../SocialDrawer/SocialDrawer";
-import { debounce } from 'debounce';
+import { debounce } from "debounce";
 import "./Home.css";
+
+import resume from "../../resume.pdf";
 
 class Home extends Component {
   constructor(props) {
@@ -13,56 +15,88 @@ class Home extends Component {
     };
   }
 
-  typeMessage = debounce((message) => {
-    // erase old message
-    this.setState({ message: "" });
-    // type new one
-    let interval = setInterval(() => {
-      // get first character
-      let characterToAdd = message.slice(0, 1);
-      // pop first character
-      message = message.substr(1, message.length);
-      if (message) {
-        let messageToType = this.state.message + characterToAdd;
-        this.setState({ message: messageToType });
-      }
-      else {
-        let messageToType = this.state.message + characterToAdd;
-        this.setState({ message: messageToType });
-        clearInterval(interval);
-      }
-    }, 25);
-  }, 750, true);
+  typeMessage = debounce(
+    message => {
+      // erase old message
+      this.setState({ message: "" });
+      // type new one
+      let interval = setInterval(() => {
+        // get first character
+        let characterToAdd = message.slice(0, 1);
+        // pop first character
+        message = message.substr(1, message.length);
+        if (message) {
+          let messageToType = this.state.message + characterToAdd;
+          this.setState({ message: messageToType });
+        } else {
+          let messageToType = this.state.message + characterToAdd;
+          this.setState({ message: messageToType });
+          clearInterval(interval);
+        }
+      }, 25);
+    },
+    750,
+    true
+  );
 
-  typeMessageSocials = debounce((message) => {
-    // erase old message
-    this.setState({ message: "" });
-    // type new one
-    let interval = setInterval(() => {
-      // get first character
-      let characterToAdd = message.slice(0, 1);
-      // pop first character
-      message = message.substr(1, message.length);
-      if (message) {
-        let messageToType = this.state.message + characterToAdd;
-        this.setState({ message: messageToType });
-      }
-      else {
-        let messageToType = this.state.message + characterToAdd;
-        this.setState({ message: messageToType });
-        clearInterval(interval);
-      }
-    }, 10);
-  }, 500, false);
+  typeMessageSocials = debounce(
+    message => {
+      // erase old message
+      this.setState({ message: "" });
+      // type new one
+      let interval = setInterval(() => {
+        // get first character
+        let characterToAdd = message.slice(0, 1);
+        // pop first character
+        message = message.substr(1, message.length);
+        if (message) {
+          let messageToType = this.state.message + characterToAdd;
+          this.setState({ message: messageToType });
+        } else {
+          let messageToType = this.state.message + characterToAdd;
+          this.setState({ message: messageToType });
+          clearInterval(interval);
+        }
+      }, 10);
+    },
+    500,
+    false
+  );
 
   render() {
-    return(
+    return (
       <div className="Home">
         <div className="Home-Main">
           <div className="Home-name">
             <div className="Home-name-text">
               <h2 className="Home-name-text-h2">Tim Carew</h2>
             </div>
+          </div>
+          <div className="Home-links-mobile">
+            <a
+              href="https://www.github.com/timcarew"
+              className="Home-links-mobile-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <br />
+            <a
+              href={resume}
+              className="Home-links-mobile-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+            <br />
+            <a
+              href="mailto:mail@timcarew.com"
+              className="Home-links-mobile-link"
+            >
+              Email
+            </a>
           </div>
           <div className="Home-Computer">
             {/* <h2 onMouseEnter={() => this.typeMessage("cd ./about")} onClick={() => this.props.changePage("about")} className="Home-Computer-link Home-Computer-about">About Me</h2> */}

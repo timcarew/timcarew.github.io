@@ -1,12 +1,44 @@
 .Home-Main {
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   padding: 1rem;
   text-align: center;
   background-image: linear-gradient(to top right, #5b0643, #e65618);
 
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 680px) {
+  .Home-Main {
+    grid-template-rows: 1fr 1fr;
+  }
+  .Home-Computer,
+  .Home-links {
+    height: 0;
+    visibility: hidden;
+  }
+  .Home-name {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+  .Home-links-mobile {
+    display: none;
+  }
+}
+
+.Home-links-mobile-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.Home-links-mobile-link:hover {
+  color: rgb(255, 255, 255);
 }
 
 .Home-name {
@@ -27,24 +59,22 @@
 }
 
 .Home-name-text-h2 {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1rem;
 }
 
 .Home-Computer {
-  /* display: grid; */
-  /* grid-template-columns: 1fr 1fr 1fr; */
   align-items: center;
   justify-items: center;
 }
 
 .Home-Computer-link {
-  background-color: rgb(49,9,37);
+  background-color: rgb(49, 9, 37);
   padding: 1rem;
   width: 40%;
   opacity: 0.8;
   border-radius: 5px;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.5s ease;
 }
 

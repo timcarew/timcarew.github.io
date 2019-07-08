@@ -1,6 +1,6 @@
 .SocialDrawer {
   padding: 1rem;
-  color: rgba(0,0,0,0);
+  color: rgba(0, 0, 0, 0);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border-radius: 5px;
@@ -14,7 +14,7 @@
 }
 
 .SocialDrawer > a {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 }
 
